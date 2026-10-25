@@ -3,7 +3,7 @@
 A Brave/Chromium extension that sends torrents and magnet links to a qBittorrent server through its WebUI. While many other extensions like this exist, this one has the minimal set of features I want, and no more.
 
 ## Features
-- **Right-click → Add Torrent** on any magnet or `.torrent` link. `.torrent` files are fetched in memory using your browser's cookies, so private trackers work. They are uploaded to qBittorrent and never saved to your Downloads folder.
+- **Right-click -> Add Torrent** on any magnet or `.torrent` link. `.torrent` files are fetched in memory using your browser's cookies, so private trackers work. They are uploaded to qBittorrent and never saved to your Downloads folder.
 - **Toolbar icon** opens your qBittorrent WebUI, or switches to its tab if one is already open.
 - **Optional click catching** (off by default):
   - *Send clicked magnet links*: a left-click on a magnet link adds it to qBittorrent.
@@ -18,7 +18,7 @@ A Brave/Chromium extension that sends torrents and magnet links to a qBittorrent
 4. Enter your server address (for example `http://192.168.1.10:8080`), username and password, then click **Test Connection**.
 
 ## qBittorrent setup
-- Turn on the WebUI under *Tools → Options → Web UI*.
+- Turn on the WebUI under *Tools -> Options -> Web UI*.
 - CSRF protection can stay enabled. The extension sets the `Origin`/`Referer` headers on its own API requests so they pass the check.
 - If you use HTTPS with a self-signed certificate, open the server address in a tab once and accept the certificate.
 
