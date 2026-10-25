@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>qBTControl Settings</title>
+  <link rel="stylesheet" href="options.css">
+  <script type="module" src="options.js"></script>
+</head>
+<body>
+  <main class="card">
+    <header class="brand">
+      <img src="../icons/icon-128.png" alt="" width="44" height="44">
+      <div>
+        <h1>qBTControl</h1>
+        <p>Send torrents straight to qBittorrent</p>
+      </div>
+    </header>
+
+    <form id="form" novalidate>
+      <section>
+        <h2>Server</h2>
+        <div class="field">
+          <label for="serverUrl">Server address</label>
+          <input id="serverUrl" type="text" placeholder="http://192.168.1.10:8080" spellcheck="false" autocomplete="url">
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" type="text" spellcheck="false" autocomplete="username">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="password">
+              <input id="password" type="password" autocomplete="current-password">
+              <button type="button" id="togglePassword" class="icon-btn" aria-label="Show password" title="Show password">
+                <svg class="eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="eye-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.6 10.6 0 0 1 12 5c6.4 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1M6.6 6.6A17.3 17.3 0 0 0 2 12s3.6 7 10 7a9.9 9.9 0 0 0 5.4-1.6"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="test">
+          <button type="button" id="test" class="btn secondary">Test Connection</button>
+          <span id="status" class="status" role="status" aria-live="polite"></span>
+        </div>
+        <p class="hint">Using HTTPS with a self-signed certificate? Open the server address in a tab once and accept the certificate.</p>
+      </section>
+
+      <section>
+        <h2>Defaults for new torrents</h2>
+        <div class="row">
+          <div class="field">
+            <label for="category">Category</label>
+            <input id="category" type="text" list="categories" placeholder="None" spellcheck="false">
+            <datalist id="categories"></datalist>
+          </div>
+          <div class="field">
+            <label for="savePath">Save path</label>
+            <input id="savePath" type="text" placeholder="qBittorrent default" spellcheck="false">
+          </div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="startPaused">
+          <span class="track" aria-hidden="true"></span>
+          <span class="text"><strong>Start paused</strong><small>New torrents are added without starting the download.</small></span>
+        </label>
+      </section>
+
+      <section>
+        <h2>Behaviour</h2>
+        <label class="switch">
+          <input type="checkbox" id="catchMagnets">
+          <span class="track" aria-hidden="true"></span>
+          <span class="text"><strong>Send clicked magnet links to qBittorrent</strong><small>Left-clicking a magnet link adds it instead of opening a desktop app.</small></span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="catchTorrents">
+          <span class="track" aria-hidden="true"></span>
+          <span class="text"><strong>Send clicked .torrent files to qBittorrent</strong><small>Torrent downloads go to qBittorrent instead of your Downloads folder.</small></span>
+        </label>
+      </section>
+
+      <footer>
+        <span id="saved" class="saved" aria-live="polite"></span>
+        <button type="submit" class="btn primary">Save</button>
+      </footer>
+    </form>
+  </main>
+</body>
+</html>
