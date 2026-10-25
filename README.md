@@ -1,4 +1,4 @@
-# qBTControl
+# ![icon](icons/icon-32.png) qBTControl
 
 A Brave/Chromium extension that sends torrents and magnet links to a qBittorrent server through its WebUI. While many other extensions like this exist, this one has the minimal set of features I want, and no more.
 
