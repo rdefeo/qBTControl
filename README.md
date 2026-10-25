@@ -1,6 +1,6 @@
 # qBTControl
 
-A Brave/Chromium extension that sends torrents and magnet links to a qBittorrent server through its WebUI.
+A Brave/Chromium extension that sends torrents and magnet links to a qBittorrent server through its WebUI. While many other extensions like this exist, this one has the minimal set of features I want, and no more.
 
 ## Features
 - **Right-click → Add Torrent** on any magnet or `.torrent` link. `.torrent` files are fetched in memory using your browser's cookies, so private trackers work. They are uploaded to qBittorrent and never saved to your Downloads folder.
